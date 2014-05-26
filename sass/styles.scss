@@ -1,0 +1,196 @@
+@import "bourbon";
+@import "variables";
+@import "wrapper";
+@import "normalize";
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+@media all {
+	html {
+		@include box-sizing(border-box);
+	}
+	body {
+		width: 1000px;
+		margin: 0 auto;
+		background: lightyellow;
+	}
+
+	.container {
+		position: relative;
+		width: 500px;
+		margin: 0 auto;
+	}
+	.logo {
+		display: block;
+		width: 100%;
+		z-index: 1;
+	}
+	h1 {
+		z-index: 9999;
+		font-weight: $bold;
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+		color: $white;
+	}
+	h1#city-name{
+		position: relative;
+		top: 650px;
+		left: -1%;
+		text-align: center;
+		color: red;
+		margin: 0 auto;
+		font-size: 3.2em;
+		font-family: $font-fancy;
+		display: none;
+	}
+	.location {
+		background-image: url('../images/enter_text2.png');
+		background-repeat: no-repeat;
+		background-position: 58% 20%;
+		position: absolute;
+		top: 1190px;
+		left: -2%;
+		z-index: 999;
+		width: 500px;
+		text-align: center;
+		color: $white;
+
+		input {
+			display: block;
+			margin: 0 auto;
+			color: red;
+			text-transform: normal;
+		}
+
+		.address {
+			width: 80%;
+			text-align: center;
+			font-size: 1.5em;
+			padding: 1%;
+			border-radius: 10px;
+			letter-spacing: 0.3em;
+			font-weight: $light;
+			border: none;
+			margin: 17% auto 4%;
+			color: lightyellow;
+			&:focus {
+				color: red;
+				letter-spacing: 0.1em;
+			}
+		}
+		input.address {
+			background: black;
+		}
+
+		label {
+			display: block;
+			margin: 10px auto;
+			width: 70%;
+			font-size: 2.5em;
+			letter-spacing: 0.05em;
+			font-family: $font-fancy;
+		}
+		.submit {
+			font-family: $font-fancy;
+			color: $white;
+			background: rgba(255,0,0,0);
+			border-radius: 10px;
+			border: none;
+			width: 147px;
+			height: 55px;
+			margin-bottom: 25px;
+			font-size: 1.9em;
+			letter-spacing: 0.15em;
+			line-height: 1.8em;
+			&:hover {
+				color: red;
+			}
+		}
+		input.submit {
+			margin-left: 36.7%;
+		}
+		.egAddress {
+			display: block;
+			margin: 20px auto;
+			width: 62%;
+			font-size: 1.3em;
+			font-weight: $light;
+		}
+	}
+	div.stores {
+		width: 500px;
+		display: block;
+		background-image: url('../images/beer-bottle-middle.png');
+		background-repeat: repeat-y;
+		margin: 0;
+		@include box-sizing(border-box);
+		padding: 5% 5% 0 5%;
+		color: red;
+		z-index: 999;
+		h2 {
+			font-variant: small-caps;
+			font-family: $font-fancy;
+			font-size: 2.5em;
+			text-align: center;
+			padding-top: 15%;
+			margin: 0;
+			&:first-child {
+				padding-top: 5%;
+			}
+		}
+		h3,
+		h4 {
+			display: inline-block;
+			font-size: 2em;
+			padding-top: 4%;
+			margin: 0 auto;
+			font-weight: $light;
+			width: 60%;
+			text-align: center;
+		}
+		h4 {
+			padding-left: 20px;
+			width: 35%;
+		}
+		// h2:nth-child(2n),
+		// h3:nth-child(2n),
+		// h4:nth-child(2n) {
+		// 	color: black;
+		// why aren't these working..  why????
+		// }
+		p {
+			font-family: $font-fancy;
+			text-transform: uppercase;
+			font-size: 1.5em;
+			text-align: center;
+			padding-top: 5%;
+			margin: 0;
+		}
+	}
+	.bottom {
+		width: 500px;
+		height: 376px;
+		margin: 0 auto;
+		background-image: url('../images/beer-bottle-bottom.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		position: relative;
+		z-index: 999999;
+	}
+	footer p {
+		color: red;
+	}
+
+}

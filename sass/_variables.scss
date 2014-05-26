@@ -1,0 +1,32 @@
+// ***** c o l o u r s *****
+$dark: rgb(51,51,51);		// #333
+$white: rgb(255,255,255);	// #fff
+
+
+// ***** f o n t s *****
+$font: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@font-face {
+    font-family: 'FTY-SKORZHEN-NCV';
+    src:url('../fonts/FTY-SKORZHEN-NCV.ttf.woff') format('woff'),
+        url('../fonts/FTY-SKORZHEN-NCV.ttf.svg#FTY-SKORZHEN-NCV') format('svg'),
+        url('../fonts/FTY-SKORZHEN-NCV.ttf.eot'),
+        url('../fonts/FTY-SKORZHEN-NCV.ttf.eot?#iefix') format('embedded-opentype'); 
+        font-weight: normal;
+        font-style: normal;
+}
+$font-fancy: 'FTY-SKORZHEN-NCV', cursive;
+
+// font weights
+$light: 300;
+$bold: 700;
+
+
+// font sizes
+$font-size: 16*1em;
+$line-height: 16*1.5em;
+
+body {
+	font-family: $font;
+	font-size: 1em;
+}
+
